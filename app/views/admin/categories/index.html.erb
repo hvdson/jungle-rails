@@ -6,7 +6,13 @@
 
   <!-- look for _product.html.erb partial to edit product display -->
   <div class="categories">
-    IT WORKS!!
+
+    <article class="category">
+    <% @categories.each do |cat| %>
+      <h4><%= cat.name %><h4>
+      <% end %>
+    </article>
+    
   </div>
 
 </section>
