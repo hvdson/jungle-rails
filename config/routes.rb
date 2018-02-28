@@ -17,6 +17,12 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
   end
 
+  namespace :admin do
+    # TODO: Directs /admin/products/* to Admin::CategoriesController
+    # TODO: (app/controllers/admin/categories_controller.rb)
+    resources :categories
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
