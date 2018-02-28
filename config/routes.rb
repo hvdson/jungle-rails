@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    # TODO: Directs /admin/products/* to Admin::CategoriesController
+    # TODO: Directs /admin/categories/* to Admin::CategoriesController
     # TODO: (app/controllers/admin/categories_controller.rb)
     resources :categories
   end
