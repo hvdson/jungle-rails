@@ -1,0 +1,43 @@
+<!-- Finish implementation of info -->
+<span>Hello! Thanks for shopping with Jungle. Here's your order details.</span>
+
+<h1><%= @order.total %></h1>
+
+  <header class="page-header">
+    <h1>Order #<%= @order.id %></h1>
+  </header>
+
+  <div class="order-summary jumbotron">
+    <span>Total Amount: $<%= @order.total %><span>
+  </div>
+
+  <div class="panel panel-default products">
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Qty.</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |item| %>
+          <tr>
+            <td>
+              <h4><%= item.product.name %></h4>
+            </td>
+            <td>
+              <%= item.product.description %>  
+            </td>
+            <td>
+              <%= item.quantity %>
+            </td>
+            <td>
+              <%= item.total_price %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
