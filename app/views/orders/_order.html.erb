@@ -1,0 +1,19 @@
+<% order.line_items.each do |item| %>
+  <tr>
+    <%= link_to item.product do %>
+      <td>
+        <h4><%= item.product.name %></h4>
+        <%= image_tag item.product.image.thumb, alt: item.product.name %>
+      </td>
+      <td>
+        <%= item.product.description %>  
+      </td>
+      <td>
+        <%= item.quantity %>
+      </td>
+      <td>
+        <%= item.total_price %>
+      </td>
+    <% end %>
+  </tr>
+<% end %>
