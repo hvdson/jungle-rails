@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new'
-  get '/login' => 'users#create'
+  post '/users' => 'users#create'
   
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]

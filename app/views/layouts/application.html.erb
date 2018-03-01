@@ -11,6 +11,11 @@
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
+
+    <% if current_user %>
+      <h3>Hi <%= current_user.first_name %> <%= current_user.last_name %></h3>
+    <% end %>
+    
     <%= yield %>
   </main>
 
