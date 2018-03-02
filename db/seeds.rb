@@ -140,25 +140,22 @@ Review.create!({
   description: 'O shit this product is dank af my guy - insta cop!',
   rating: 5,
   user_id: 1,
-  product_id: 23
+  product_id: 12
 })
 
 Review.create!({
   description: 'Yo this is not lit dude - returned :(',
   rating: 1,
   user_id: 2,
-  product_id: 23
+  product_id: 12
 })
 
 Review.create!({
   description: 'It\'s alright.',
   rating: 3,
   user_id: 3,
-  product_id: 23
+  product_id: 12
 })
-
-
-
 
 
 puts "DONE!"
