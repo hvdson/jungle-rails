@@ -1,0 +1,20 @@
+
+<h1>Dank reviews</h1>
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Rating</th>
+  </tr>
+
+  
+
+  <% @reviews.each do |review| %>
+  <!-- review.product_id is type Fixnum while params[:id] is type String -->
+  <% if review.product_id.to_s == params[:id] %>
+    <tr>
+      <td><%= review.description %></td>
+      <td><%= review.rating %></td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
