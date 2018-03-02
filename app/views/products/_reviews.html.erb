@@ -1,12 +1,27 @@
 
 <h1>Dank reviews</h1>
+
+
+<%= form_for @product, url: {action: "create"} do |f| %>
+  New Review:
+  <ul>
+    <%= f.fields_for :review do |reviews_form| %>
+      <li>
+        <%= reviews_form.label :description %>
+        <%= text_area_tag :description %>
+        <%= reviews_form.label :rating %>
+        <%= reviews_form.select :rating, ['1', '2', '3', '4', '5']%>
+         <%= f.submit "Submit" %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <table>
   <tr>
     <th>Description</th>
     <th>Rating</th>
   </tr>
-
-  
 
   <% @reviews.each do |review| %>
   <!-- review.product_id is type Fixnum while params[:id] is type String -->
