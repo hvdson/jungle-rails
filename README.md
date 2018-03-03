@@ -63,5 +63,13 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Visitors are able to view product ratings by other users. People logged in are able to make new reviews. Users are also able to delete their own review for a specific product.
 
 <h2>Screenshots</h2>
-!["Screenshot of ipad"](https://github.com/hvdson/tweeter/blob/master/docs/responsive-design-ipad.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/home.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/signup.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/login.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/admin_login.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/admin_categories.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/product.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/new_review.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/show_new_review.png)
+!["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/delete_review.png)
 
