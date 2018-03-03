@@ -64,12 +64,20 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 <h2>Screenshots</h2>
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/home.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/signup.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/login.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/admin_login.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/admin_categories.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/product.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/new_review.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/show_new_review.png)
+
 !["Home Page"](https://github.com/hvdson/jungle-rails/blob/master/docs/delete_review.png)
 
