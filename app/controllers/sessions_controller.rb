@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       # send back to login form
-      redirect_to 'login'
+      redirect_to '/login'
     end
   end
 
