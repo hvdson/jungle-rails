@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :authorize, :set_locale, :except => :login
+  before_filter :authorize, :except => :login
 
   def create
     @product = Product.find(params[:product_id])
@@ -13,6 +13,12 @@ class ReviewsController < ApplicationController
     else
       redirect_to "/products/#{params[:product_id]}"
     end
+  end
+
+
+  def destroy
+    Review.find(params[:id]).destroy
+    redirect_to "/products/#{params[:product_id]}"
   end
 
   private

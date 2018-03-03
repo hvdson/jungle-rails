@@ -22,12 +22,10 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-          <dt>Reviews:</dt>
-          <%= render :partial => 'reviews' %>
         </dl>
       </div>
     </div>
-
+  <%= render :partial => 'reviews' %>
   </article>
 
 </section>

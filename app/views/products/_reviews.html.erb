@@ -1,35 +1,48 @@
 
-<h1>Dank reviews</h1>
+<h2>Reviews</h2>
 
-<% if current_user %>
-  <%= form_for [@product, @review] do |f| %>
-    New Review:
-    <ul>
-      <li>
-        <%= f.label :description %>
-        <%= f.text_area :description %>
-        <%= f.label :rating %>
-        <%= f.select :rating, ['1', '2', '3', '4', '5'] %>
-        <%= f.submit "Submit" %>
-      </li>
-    </ul>
-  <% end %>
-<% else %>
-  LOGIN TO POST A REVIEW
-<% end %>
+<div class="form-group">
+  <table class="table rounded">
+    <% if current_user %>
+      <%= form_for [@product, @review] do |f| %>
+        <tbody>
+          <tr>
+            <th class='col-sm-8'><%= f.label :description %></th>
+            <th class='col-sm-4'><%= f.label :rating %></th>
+          </tr>
+          <tr>
+            <td><%= f.text_area :description, class: "col-sm-12 form-control review-textarea" %></td>
+            <td><%= f.select "rating", ['1', '2', '3', '4', '5'], {}, class: "form-control" %></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td><%= f.submit "Submit", class: "btn btn-primary", type: "submit" %></td>
+        </tfoor>
+      <% end %>
+    <% else %>
+    <span><%= link_to "LOGIN TO POST A REVIEW", login_path %></span>
+    <% end %>
+  </table>
+</div>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Description</th>
-    <th>Rating</th>
-  </tr>
-
-  <% @product.reviews.reverse_order.each do |review| %>
-  <!-- review.product_id is type Fixnum while params[:id] is type String -->
+<div class="panel panel-default items">
+  <table class="table rounded">
     <tr>
-      <td><%= review.user.first_name %></td>
-      <td><%= review.description %></td>
-      <td><%= review.rating %></td>
-  <% end %>
-</table>
+      <th>User</th>
+      <th>Rating</th>
+      <th>Description</th>
+    </tr>
+
+    <% @product.reviews.reverse_order.each do |review| %>
+    <!-- review.product_id is type Fixnum while params[:id] is type String -->
+      <tr>
+        <td><%= review.user.first_name %></td>
+        <td><%= review.rating %></td>
+        <td><%= review.description %></td>
+        <% if current_user && current_user.email == review.user.email %>
+          <td><%= button_to "delete", [@product, review], :method  => :delete, class: "btn btn-danger" %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
