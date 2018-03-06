@@ -20,7 +20,7 @@ RSpec.describe Product, type: :model do
     it 'should be invalid if the name field is empty' do
       @product.name = nil
       expect(@product).to_not be_valid
-      expect(@product.errors.full_messages[0]).to eq('Name can\'t be blank')
+      expect(@product.errors.full_messages).to include('Name can\'t be blank')
     end
 
     it 'should be invalid if the price field is empty' do
